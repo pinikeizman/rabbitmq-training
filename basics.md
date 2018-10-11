@@ -53,6 +53,12 @@ Now let's use the Admin CLI to read the message:
 $ rabbitmqadmin get queue=hello requeue=false
 ```
 
+if you are using rabbitmqadmin@3.7.x
+```
+$ rabbitmqadmin get queue=hello ackmode=ack_requeue_false
+```
+
+
 This time we opted not to requeue the message. Going back to the mgmt. console you should see that the `hello` queue is empty. You can also use the CLI:
 
 ```
